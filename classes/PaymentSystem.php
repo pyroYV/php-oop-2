@@ -29,5 +29,11 @@ class PaymentSystem
         $this->setCardNumber($_cardNumber);
         $this->setExpireDate($_expireDate);
     }
+
+    public function checkExpirationDate($expireDate){
+        if($expireDate>date('y-m-d')){
+            return true;
+        }
+    }
 }
 ?>

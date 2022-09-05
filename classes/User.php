@@ -19,13 +19,13 @@
         return $this->cart;
     }
     protected function setUserName($_userName){
-        $this->name = $_userName;
+        $this->userName = $_userName;
     }
     protected function setUserMail($_userMail){
-        $this->name = $_userMail;
+        $this->userMail = $_userMail;
     }
     protected function setRegistered($_registered){
-        $this->price = $_registered;
+        $this->registered = $_registered;
     }
     protected function setCart($_item){
         $this->cart[] = $_item;

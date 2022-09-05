@@ -30,7 +30,7 @@ class Food extends Product
         parent::__construct($_name,$_price,$_discount);
         $this->setFoodFor($_foodFor);
         $this->setExpireDate($_expireDate);
-        $this->setIngredientsList($_ingredientsList);
+        $this->setIngredientsList(...$_ingredientsList);
     }
 }
 
