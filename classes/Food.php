@@ -17,17 +17,17 @@ class Food extends Product
         return $this->ingredientsList;
     }
     protected function setFoodFor($_foodFor){
-        $this->name = $_foodFor;
+        $this->foodFor = $_foodFor;
     }
     protected function setExpireDate($_expireDate){
-        $this->name = $_expireDate;
+        $this->expireDate = $_expireDate;
     }
     protected function setIngredientsList(...$_ingredientsList){
-        $this->name = $_ingredientsList;
+        $this->ingredientsList = array_merge($this->ingredientsList,$_ingredientsList);
     }
 
     public function __construct($_name,$_price,$_discount,$_foodFor,$_expireDate,$_ingredientsList){
-        Product::__construct($_name,$_price,$_discount);
+        parent::__construct($_name,$_price,$_discount);
         $this->setFoodFor($_foodFor);
         $this->setExpireDate($_expireDate);
         $this->setIngredientsList($_ingredientsList);

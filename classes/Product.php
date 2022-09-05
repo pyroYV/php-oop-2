@@ -18,10 +18,10 @@ class Product
         $this->name = $_name;
     }
     protected function setPrice($_price){
-        $this->name = $_price;
+        $this->price = $_price;
     }
     protected function setDiscount($_discount){
-        $this->name = $_discount;
+        $this->discount = $_discount;
     }
 
     public function __construct($_name,$_price,$_discount){

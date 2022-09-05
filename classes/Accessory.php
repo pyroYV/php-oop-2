@@ -16,7 +16,7 @@ class Accessory extends Product
 
 
     public function __construct($_name,$_price,$_discount,$_toyFor){
-        Product::__construct($_name,$_price,$_discount);
+        parent::__construct($_name,$_price,$_discount);
         $this->setToyFor($_toyFor);
     }
 }

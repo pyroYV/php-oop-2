@@ -26,7 +26,7 @@ require_once __DIR__ . '/classes/Food.php';
 </head>
 <body>
     <?php
-    $croccantini = new Food('croccantini',29,0,'dog','22-12-2023','ingrediente1','ingrediente2');
+    $croccantini = new Food('croccantini',29,0,'dog','22-12-2023',['ingrediente1','ingrediente2']);
     var_dump($croccantini);
 
     $prodotto = new Product('antiparassitario',89,0);
