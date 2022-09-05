@@ -23,6 +23,12 @@ class Product
     protected function setDiscount($_discount){
         $this->name = $_discount;
     }
+
+    public function __construct($_name,$_price,$_discount){
+        $this->setName($_name);
+        $this->setPrice($_price);
+        $this->setDiscount($_discount);
+    }
 }
 
 
