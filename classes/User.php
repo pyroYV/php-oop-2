@@ -51,9 +51,11 @@
 
     public function calculateCartTotal(){
         $this->applyLoggedDiscount();
-        $sum=0;
+        $sum = 0;
         foreach ($this->getCart() as $checkoutItem) {
-            $sum += $checkoutItem->getPrice() * (($checkoutItem->getDiscount())/100);
+            
+            $discount= ($checkoutItem->getPrice()) * (($checkoutItem->getDiscount())/100);
+            $sum += $checkoutItem->getPrice() - $discount;
         }
         return $sum;
     }

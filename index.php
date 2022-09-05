@@ -52,10 +52,11 @@ require_once __DIR__ . '/classes/PaymentSystem.php';
     <?php
     $utente1->applyLoggedDiscount();
 
-    var_dump($utente1->getCart());
+    echo 'Oggetti del carrello';
+    foreach($utente1->getCart() as $item){echo  '<br>'. $item->getName() . '<br>';}
 
     
-    var_dump($utente1->calculateCartTotal())
+    echo 'il totale è ' . ($utente1->calculateCartTotal());
     ?>
 
 
