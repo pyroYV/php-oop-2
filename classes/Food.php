@@ -16,13 +16,13 @@ class Food extends Product
     public function getIngredientsList(){
         return $this->ingredientsList;
     }
-    protected function setFoodFor($_foodFor){
+    public function setFoodFor($_foodFor){
         $this->foodFor = $_foodFor;
     }
-    protected function setExpireDate($_expireDate){
+    public function setExpireDate($_expireDate){
         $this->expireDate = $_expireDate;
     }
-    protected function setIngredientsList(...$_ingredientsList){
+    public function setIngredientsList(...$_ingredientsList){
         $this->ingredientsList = array_merge($this->ingredientsList,$_ingredientsList);
     }
 

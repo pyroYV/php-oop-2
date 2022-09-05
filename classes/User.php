@@ -28,7 +28,7 @@
         $this->registered = $_registered;
     }
     protected function setCart(...$_item){
-        $this->cart = array_merge($this->cart,$_item);
+        $this->cart = array_merge($this->cart,...$_item);
     }
 
     public function __construct($_userName,$_userMail,$_registered,$_cart){
@@ -47,5 +47,14 @@
                 }
             }
         }
+    }
+
+    public function calculateCartTotal(){
+        $this->applyLoggedDiscount();
+        $sum=0;
+        foreach ($this->getCart() as $checkoutItem) {
+            $sum += $checkoutItem->getPrice() * (($checkoutItem->getDiscount())/100);
+        }
+        return $sum;
     }
 }

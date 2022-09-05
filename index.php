@@ -53,6 +53,9 @@ require_once __DIR__ . '/classes/PaymentSystem.php';
     $utente1->applyLoggedDiscount();
 
     var_dump($utente1->getCart());
+
+    
+    var_dump($utente1->calculateCartTotal())
     ?>
 
 
