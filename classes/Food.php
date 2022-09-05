@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/classes/Products.php';
+require_once __DIR__ . '/Product.php';
 
 class Food extends Product
 {
@@ -22,7 +22,7 @@ class Food extends Product
     protected function setExpireDate($_expireDate){
         $this->name = $_expireDate;
     }
-    protected function setIngredientsList($_ingredientsList){
+    protected function setIngredientsList(...$_ingredientsList){
         $this->name = $_ingredientsList;
     }
 
