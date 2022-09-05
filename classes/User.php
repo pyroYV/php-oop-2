@@ -3,7 +3,7 @@
     protected $userName;
     protected $userMail;
     protected $registered = false;
-    protected $cart;
+    protected $cart = [];
 
     
     public function getUserName(){
@@ -27,8 +27,8 @@
     protected function setRegistered($_registered){
         $this->price = $_registered;
     }
-    protected function setCart($_cart){
-        $this->cart = $_cart;
+    protected function setCart($_item){
+        $this->cart[] = $_item;
     }
 
     public function __construct($_userName,$_userMail,$_registered,$_cart){

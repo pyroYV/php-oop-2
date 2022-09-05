@@ -4,7 +4,6 @@ Classes Products
             -> Accessories
         User
             -> Registered User
-            -> Guest
         PaymentSystem 
             -> Cash
             -> Credit Card
@@ -15,6 +14,7 @@ Classes Products
 <?php
 require_once __DIR__ . '/classes/Product.php';
 require_once __DIR__ . '/classes/Food.php';
+require_once __DIR__ . '/classes/User.php';
 ?> 
 <!DOCTYPE html>
 <html lang="en">
