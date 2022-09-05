@@ -42,9 +42,15 @@ require_once __DIR__ . '/classes/PaymentSystem.php';
     var_dump($validCard)
     ?>
     <?php
-    var_dump($validCard->checkExpirationDate($validCard->getExpireDate()));
+    if($validCard->checkExpirationDate($validCard->getExpireDate())){
+        echo 'pagamento possibile per ' . $utente1 -> getUserName();
+    };
     ?>
     
+    <?php
+    if($utente1->)
+    ?>
+
 
 </body>
 </html>

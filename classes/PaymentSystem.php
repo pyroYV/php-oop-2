@@ -30,9 +30,11 @@ class PaymentSystem
         $this->setExpireDate($_expireDate);
     }
 
-    public function checkExpirationDate($expireDate){
-        if($expireDate>date('y-m-d')){
+    public function checkExpirationDate(){
+        if($this->expireDate>date('Y-m-d')){
             return true;
+        }else{
+            return false;
         }
     }
 }
