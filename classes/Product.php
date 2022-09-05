@@ -20,7 +20,7 @@ class Product
     protected function setPrice($_price){
         $this->price = $_price;
     }
-    protected function setDiscount($_discount){
+    public function setDiscount($_discount){
         $this->discount = $_discount;
     }
 

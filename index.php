@@ -30,12 +30,14 @@ require_once __DIR__ . '/classes/PaymentSystem.php';
 <body>
     <?php
     $croccantini = new Food('croccantini',29,0,'dog','22-12-2023',['ingrediente1','ingrediente2']);
+    $sabbietta = new Food ('sabbietta',100,15,'cats','settembre',['sabbia','antiodore']);
     var_dump($croccantini);
+    var_dump($sabbietta);
 
     $prodotto = new Product('antiparassitario',89,0);
     var_dump($prodotto);
 
-    $utente1 = new User('PaoloCannone22','maildipaolo@paolomail.com',true,$croccantini);
+    $utente1 = new User('PaoloCannone22','maildipaolo@paolomail.com',true,[$croccantini,$sabbietta]);
     var_dump($utente1);
 
     $validCard = new PaymentSystem('credit','55584842684','2022-09-06');
@@ -48,7 +50,9 @@ require_once __DIR__ . '/classes/PaymentSystem.php';
     ?>
     
     <?php
-    if($utente1->)
+    $utente1->applyLoggedDiscount();
+
+    var_dump($utente1->getCart());
     ?>
 
 

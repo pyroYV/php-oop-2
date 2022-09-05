@@ -27,8 +27,8 @@
     protected function setRegistered($_registered){
         $this->registered = $_registered;
     }
-    protected function setCart($_item){
-        $this->cart[] = $_item;
+    protected function setCart(...$_item){
+        $this->cart = array_merge($this->cart,$_item);
     }
 
     public function __construct($_userName,$_userMail,$_registered,$_cart){
@@ -36,5 +36,16 @@
         $this->setUserMail($_userMail);
         $this->setRegistered($_registered);
         $this->setCart($_cart);
+    }
+
+    public function applyLoggedDiscount(){
+        if($this->registered === true){
+            foreach ($this->getCart() as $cartItem) {
+                if($cartItem->getDiscount()<20)
+                {
+                    $cartItem->setDiscount(20);
+                }
+            }
+        }
     }
 }
